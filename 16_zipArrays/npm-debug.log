@@ -1,0 +1,84 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/RickV/.nvm/versions/node/v6.2.2/bin/node',
+1 verbose cli   '/Users/RickV/.nvm/versions/node/v6.2.2/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '–g',
+1 verbose cli   'mocha@1.16.2' ]
+2 info using npm@3.9.5
+3 info using node@v6.2.2
+4 error arg Argument starts with non-ascii dash, this is probably invalid: [ '–g', 'mocha@1.16.2' ]
+5 silly loadCurrentTree Starting
+6 silly install loadCurrentTree
+7 silly install readLocalPackageData
+8 silly fetchPackageMetaData –g
+9 silly fetchPackageMetaData mocha@1.16.2
+10 silly fetchNamedPackageData mocha
+11 silly mapToRegistry name mocha
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry data Result {
+14 silly mapToRegistry   raw: 'mocha',
+14 silly mapToRegistry   scope: null,
+14 silly mapToRegistry   name: 'mocha',
+14 silly mapToRegistry   rawSpec: '',
+14 silly mapToRegistry   spec: 'latest',
+14 silly mapToRegistry   type: 'tag' }
+15 silly mapToRegistry uri https://registry.npmjs.org/mocha
+16 silly fetchOtherPackageData –g
+17 silly cache add args [ '–g', null ]
+18 verbose cache add spec –g
+19 silly cache add parsed spec Result {
+19 silly cache add   raw: '–g',
+19 silly cache add   scope: null,
+19 silly cache add   name: null,
+19 silly cache add   rawSpec: '–g',
+19 silly cache add   spec: '/Users/RickV/workspace2/DailyProgrammer/16_zipArrays/–g',
+19 silly cache add   type: 'local' }
+20 error addLocal Could not install /Users/RickV/workspace2/DailyProgrammer/16_zipArrays/–g
+21 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open '/Users/RickV/workspace2/DailyProgrammer/16_zipArrays/–g'
+21 silly fetchPackageMetaData     at Error (native)
+21 silly fetchPackageMetaData  error for –g { Error: ENOENT: no such file or directory, open '/Users/RickV/workspace2/DailyProgrammer/16_zipArrays/–g'
+21 silly fetchPackageMetaData     at Error (native)
+21 silly fetchPackageMetaData   errno: -2,
+21 silly fetchPackageMetaData   code: 'ENOENT',
+21 silly fetchPackageMetaData   syscall: 'open',
+21 silly fetchPackageMetaData   path: '/Users/RickV/workspace2/DailyProgrammer/16_zipArrays/–g' }
+22 verbose request uri https://registry.npmjs.org/mocha
+23 verbose request no auth needed
+24 info attempt registry request try #1 at 9:30:25 AM
+25 verbose request id 9d55cb095400f164
+26 verbose etag "8O7D27XONAQ2720Y6UDLA9LS7"
+27 http request GET https://registry.npmjs.org/mocha
+28 info retry will retry, error on last attempt: TypeError: The header content contains invalid characters
+29 info attempt registry request try #2 at 9:30:35 AM
+30 verbose etag "8O7D27XONAQ2720Y6UDLA9LS7"
+31 http request GET https://registry.npmjs.org/mocha
+32 info retry will retry, error on last attempt: TypeError: The header content contains invalid characters
+33 info attempt registry request try #3 at 9:31:35 AM
+34 verbose etag "8O7D27XONAQ2720Y6UDLA9LS7"
+35 http request GET https://registry.npmjs.org/mocha
+36 silly get cb [ 304, undefined ]
+37 verbose etag https://registry.npmjs.org/mocha from cache
+38 verbose get saving mocha to /Users/RickV/.npm/registry.npmjs.org/mocha/.cache.json
+39 verbose correctMkdir /Users/RickV/.npm correctMkdir not in flight; initializing
+40 silly rollbackFailedOptional Starting
+41 silly rollbackFailedOptional Finishing
+42 silly runTopLevelLifecycles Starting
+43 silly runTopLevelLifecycles Finishing
+44 silly install printInstalled
+45 verbose stack Error: ENOENT: no such file or directory, open '/Users/RickV/workspace2/DailyProgrammer/16_zipArrays/–g'
+45 verbose stack     at Error (native)
+46 verbose cwd /Users/RickV/workspace2/DailyProgrammer/16_zipArrays
+47 error Darwin 15.6.0
+48 error argv "/Users/RickV/.nvm/versions/node/v6.2.2/bin/node" "/Users/RickV/.nvm/versions/node/v6.2.2/bin/npm" "install" "–g" "mocha@1.16.2"
+49 error node v6.2.2
+50 error npm  v3.9.5
+51 error path /Users/RickV/workspace2/DailyProgrammer/16_zipArrays/–g
+52 error code ENOENT
+53 error errno -2
+54 error syscall open
+55 error enoent ENOENT: no such file or directory, open '/Users/RickV/workspace2/DailyProgrammer/16_zipArrays/–g'
+56 error enoent ENOENT: no such file or directory, open '/Users/RickV/workspace2/DailyProgrammer/16_zipArrays/–g'
+56 error enoent This is most likely not a problem with npm itself
+56 error enoent and is related to npm not being able to find a file.
+57 verbose exit [ -2, true ]
