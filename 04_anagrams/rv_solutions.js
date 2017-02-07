@@ -19,5 +19,5 @@ function anie(word,ana){
   }
 }
 
-console.log(anie(word,ana));
+// console.log(anie(word,ana));
 console.log(anie(word,num));
