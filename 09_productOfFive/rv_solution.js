@@ -7,7 +7,6 @@ function findProduct (input){
   // let input2 = input.sort().reverse()
   // console.log(input);
   for (var i = 0; i < 5; i++) {
-
     bucket.push(input[i])
   }
   return bucket.reduce(function(a,b){
