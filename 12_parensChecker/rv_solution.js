@@ -1,6 +1,7 @@
 let parens = "()(((())))"
 let nonParens = "())))("
 let nonParens2 = ')('
+// let something = 'help'
 
 function parensChecker(string){
   string = string.split('').join('')
