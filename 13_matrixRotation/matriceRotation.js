@@ -7,7 +7,7 @@ var matrix1 = [[44, 23],
                [9, 28],
                [85, 16],
                [33, 18]];
-var results = []
+// var results = []
 
 function rotate(input){
   var results = []
@@ -22,4 +22,4 @@ function rotate(input){
   return results
 }
 
-rotate(matrix1)
+rotate(matrix)
