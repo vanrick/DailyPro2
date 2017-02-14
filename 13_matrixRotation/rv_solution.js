@@ -29,7 +29,7 @@ function matrix(array){
 for (var i = 0; i < array[0].length; i++) {
   // console.log(array[0]);
   let tempResults = []
-  for (var j = array.length-1; j > -1; j--) {
+  for (var j = array.length-1; j >= 0; j--) {
     console.log('j ',array[j][i]);
     tempResults.push(array[j][i])
   }
@@ -41,4 +41,4 @@ console.log(results);
 return results
 }
 
-matrix(matrix1)
+matrix(matrix2x3)
