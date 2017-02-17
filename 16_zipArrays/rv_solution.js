@@ -14,6 +14,7 @@ function arrZip(a1,a2){
     bucket.push(a1[i])
     bucket.push(a2[i])
   }
+  console.log(extra);
   console.log(bucket.concat(extra));
   return bucket.concat(extra)
 }
