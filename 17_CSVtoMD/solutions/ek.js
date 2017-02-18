@@ -13,6 +13,7 @@ function csvToMd(csv){
   var item;
 
   //console.log(lines);
+  let newLines = []
 
   for (var i = 0; i < lines.length; i++) {
     item = lines[i].split(',');
