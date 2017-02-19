@@ -4,18 +4,18 @@ let num1 = 11
 
 function gameOfThrees(num){
   let bucket = 0
-  if (num % 3) {
+  if (num % 3 == 0) {
     console.log('bucket 3', bucket);
-    bucket += 0
-  }else if(num % 2){
+    bucket = num + " " + 0
+  }else if(num % 3 == 2){
     console.log('bucket 2', bucket);
-    bucket += 1
-  }else if(num % 4){
+    bucket = num + " " + 1
+  }else if(num % 3 == 1){
     console.log('bucket 4', bucket);
-    bucket -= 1
+    bucket = num + ' ' + '-1'
   }
   console.log(bucket);
   return bucket
 }
 
-gameOfThrees(num1)
+gameOfThrees(100)
