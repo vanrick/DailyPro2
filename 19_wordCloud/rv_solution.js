@@ -14,20 +14,20 @@ let words = {
 }
 
 function wordCounts(input){
-  // console.log(input["Ila Huels"]);
-  let ila = input["Ila Huels"].toLowerCase().split(' ')
-  let cris = input['Cristopher Feest']
-  // let first = ila.toLowerCase().split(' ');
-  console.log(ila);
-  // return input.reduce(function(results, words, i){
-  //   if (results[words]) {
-  //     results[words]++
-  //   }else{
-  //     results[words]=1
-  //   }
-  //   console.log(results);
-  //   return results
-  // },{})
+  let ila = input["Ila Huels"].join(' ').toLowerCase()
+  let cris = input['Cristopher Feest'].join(' ')
+  // ila.split(' ')
+  // console.log(ila);
+  return ila.split(' ').reduce(function(results, words, i){
+    if (results[words]) {
+      results[words]++
+    }else{
+      results[words]=1
+    }
+    console.log(results);
+    return results
+  },{})
+
 }
 
 wordCounts(words)
