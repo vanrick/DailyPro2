@@ -14,20 +14,34 @@ let words = {
 }
 
 function wordCounts(input){
-  let ila = input["Ila Huels"].join(' ').toLowerCase()
-  let cris = input['Cristopher Feest'].join(' ')
-  // ila.split(' ')
-  // console.log(ila);
-  return ila.split(' ').reduce(function(results, words, i){
-    if (results[words]) {
-      results[words]++
-    }else{
-      results[words]=1
+  let keys = Object.keys(input)
+  // console.log(keys);
+  let bucket = {}
+  for (var i = 0; i < keys.length; i++) {
+    // console.log(keys[i])
+    // console.log(input[keys[i]]);
+    let lineWords = input[keys[i]]
+    for (var j = 0; j < lineWords.length; j++) {
+      let indwordArray = lineWords[j].split(' ')
+      // console.log(indwordArray)
+      for (var k = 0; k < indwordArray.length; k++) {
+        // console.log(indwordArray[k])
+        if (bucket[indwordArray[k]]) {
+          bucket[indwordArray[k]].count ++
+          if (bucket[indwordArray[k]].people.indexOf(keys[i])<0) {
+            bucket[indwordArray[k]].people.push(keys[i])
+          }
+        }else{
+          bucket[indwordArray[k]]={
+            count:1,
+            people:[keys[i]]
+          }
+        }
+      }
     }
-    console.log(results);
-    return results
-  },{})
-
+  }
+  console.log(bucket);
+return bucket
 }
 
 wordCounts(words)
