@@ -2,8 +2,8 @@ let mathQuestion = "What is 5 minus 3 and 8 plus 2 divided by 3"
 let math2 = 'What is 10 minus 2 and 9 plus 3 divided by 4'
 
 function mathy(input){
-  var second = input.replace(/\bwhat|is|b\S+/ig,"")
-  var first  = second.replace(/\s+/g,' ').trim().split(' ')
+  let second = input.replace(/\bwhat|is|b\S+/ig,"")
+  let first  = second.replace(/\s+/g,' ').trim().split(' ')
   // console.log(first);
   let bucket = 0
   for (var i = 0; i < first.length; i++) {
