@@ -1,5 +1,5 @@
 /* Created by David Adams February 29 2016 */
-fizzBuzz(process.argv[2])
+fizzBuzz(21)
 function fizzBuzz(num) {
   if (num === 1) {
     console.log(1);
