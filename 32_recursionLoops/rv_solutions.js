@@ -1,7 +1,7 @@
 
 function fizzyBuzzy(num){
       if (num==1) {
-      console.log(1);
+          console.log(1);
       return
       }
       if (num%3===0 && num%5===0) {
@@ -15,4 +15,5 @@ function fizzyBuzzy(num){
       }
     fizzyBuzzy(num - 1)
 }
-fizzyBuzzy(21)
+
+fizzyBuzzy(100)
