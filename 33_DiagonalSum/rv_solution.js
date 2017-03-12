@@ -9,10 +9,11 @@ function sumz(num){
   // console.log(num);
   let bucket = 0
   for (var i = 0; i < num.length; i++) {
+    // bucket += num[i][i] + num[i][num.length - i -1]
     console.log(num[i][i])
-    console.log(num[num.length - i - 1][i]);
+    console.log(num[i][num.length - i - 1]);
   }
-
+  console.log('bucket: ',bucket);
   return bucket
 }
 
