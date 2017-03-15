@@ -30,7 +30,7 @@ pramp(arr)
 //quad problem
 
 var arr = [4,3,1,-5,7,8]
-var arr2 = [1,3,4,0,9,10]
+var arr2 = [2,9,2,0,8,-4]
 var s = 8
 
 function findSumOf(array, sum){
@@ -41,14 +41,15 @@ let bucket = []
       for (var k = j+1; k < array.length; k++) {
         for (var l = k+1; l < array.length; l++) {
           if (array[i]+array[j]+array[k]+array[l] == sum) {
-            bucket.push(array[i],array[j],array[k],array[l])
+             bucket.push(array[i],array[j],array[k],array[l])
+            // console.log([array[i],array[j],array[k],array[l]]);
           }
         }
       }
     }
-    console.log(bucket);
-    return bucket
   }
+  console.log(bucket);
+  return bucket
 }
 
 findSumOf(arr2,s)
