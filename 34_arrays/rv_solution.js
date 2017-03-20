@@ -53,7 +53,7 @@ function pramp(arr){
 //
 // findSumOf(arr2,s)
 
-//second version of quad problem
+//second version of quad problems
 
 const arr = [4, 0, -5, 1, 9, 8]
 const arr2 = [2, 2, 2, 2, 8, 10]
