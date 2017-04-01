@@ -10,12 +10,11 @@ function wordy(word){
   var array = word.toLowerCase().replace(/\bwhat|\bis|\bby\b|\?/g, '').split(' ');
   var newWord = array.toString().replace(/[, ]+/g, " ").trim()
   var newWord2 = newWord.split(' ')
-  // var newWord3 = newWord.split(' ')
 
   var num = []
   var symbols = []
   var together = []
-  
+
   for (var i = 0; i < newWord2.length; i++) {
     if (Number.isInteger(parseInt(newWord2[i])) === true) {
       num.push(Number(newWord2[i]))
