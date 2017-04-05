@@ -6,9 +6,12 @@ function numToEng(num){
   }
   if (num == 2) {
     english = 'two'
+  }else{
+    console.log(null);
+    return null
   }
   console.log(english);
   return english
 }
 
-numToEng(2)
+numToEng(4)
