@@ -35,9 +35,8 @@ function numToEng(num){
   for (var key in numToWords) {
     if (String(num).hasOwnProperty(key)) {
       // console.log(numToWords[key]);
+      // console.log(String(num).hasOwnProperty(key));
       result = numToWords[key]
-    }else if (num.toString().split('').length == 2 ) {
-      result = '2fer'
     }
   }
   console.log('result: ', result);
