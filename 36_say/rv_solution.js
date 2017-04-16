@@ -39,7 +39,7 @@ function numToEng(num){
       result = numToWords[key]
     }
   }
-  console.log('results: ', resuls);
+  console.log('results: ', result);
   return result
 }
 
