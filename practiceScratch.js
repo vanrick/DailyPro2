@@ -50,6 +50,10 @@ garland(gWord3)
 //
 // console.log(citrus);
 
+var fruits1 = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+var citrus1 = fruits1.splice(1,2)
+console.log(citrus1);
+
 // fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
 // citrus contains ['Orange','Lemon']
 
