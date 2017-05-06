@@ -1,21 +1,21 @@
-//FizzBuzz Recursion
-// function recurs(num){
-//   if (num === 0) {
-//     return 1
-//   }
-//   if (num % 3 == 0 & num % 5 == 0) {
-//     console.log('FizzBuzz');
-//   }else if(num % 3 == 0){
-//     console.log('Fizz');
-//   }else if(num % 5 == 0){
-//     console.log('Buzz');
-//   }else{
-//     console.log(num);
-//   }
-//   return recurs(num-1)
-// }
-//
-// recurs(100)
+// FizzBuzz Recursion
+function recurs(num){
+  if (num === 0) {
+    return 1
+  }
+  if (num % 3 == 0 & num % 5 == 0) {
+    console.log('FizzBuzz');
+  }else if(num % 3 == 0){
+    console.log('Fizz');
+  }else if(num % 5 == 0){
+    console.log('Buzz');
+  }else{
+    console.log(num);
+  }
+  return recurs(num-1)
+}
+
+recurs(100)
 
 // Garland Word
 
@@ -40,22 +40,20 @@ function garland(word){
     }
   }
   // console.log('degree: ', degree);
-  // return degree
+  return degree
 }
 
 garland(gWord3)
 
 // var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
 // var citrus = fruits.slice(2,3);
-//
 // console.log(citrus);
 
 var fruits1 = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
 var citrus1 = fruits1.splice(1,2)
 console.log(citrus1);
+console.log(fruits1);
 
-// fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
-// citrus contains ['Orange','Lemon']
 
 
 const users = [
