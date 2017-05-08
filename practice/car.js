@@ -14,7 +14,7 @@ Car.prototype.refuel = function(){
   this.gas = 100;
 }
 
-let Toyota = new Car('Supra', '40,000', 'off');
+let Toyota = new Car('Rav4', '40,000', 'off');
 
 console.log(Toyota);
 Toyota.start();
