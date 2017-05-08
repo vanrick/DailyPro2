@@ -50,3 +50,21 @@ const users = [
 //the height should be converted from inches to centimeters
 //the location should be enumerated
 //if the user has a username use that otherwise use the email before the @
+let locationKey = {
+  US: 1,
+  UK: 2,
+  SK: 3,
+}
+
+function name(first_name, last_name) {
+  return first_name + " " + last_name
+}
+
+function height_converter(height){
+  return Math.ceil(height * 2.54)
+}
+
+function enumerateLocation(location, locationKey){
+  return locationKey[location]
+}
+console.log(enumerateLocation('UK', locationKey));
