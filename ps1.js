@@ -56,7 +56,7 @@ let locationKey = {
   SK: 3,
 }
 
-function name(first_name, last_name) {
+function namez(first_name, last_name) {
   return first_name + " " + last_name
 }
 
@@ -67,4 +67,29 @@ function height_converter(height){
 function enumerateLocation(location, locationKey){
   return locationKey[location]
 }
-console.log(enumerateLocation('UK', locationKey));
+// console.log(enumerateLocation('UK', locationKey));
+function findUserName(email){
+  let index = email.indexOf('@');
+  return email.split('').splice(0,index).join('');
+}
+// console.log(findUserName('howie@gmail.com'))
+function changedJSON(users){
+  return users.map(function(key){
+    let name = namez(key.first_name, key.last_name);
+    let height = height_converter(key.height);
+    let location = enumerateLocation(key.locations, locationKey);
+    let userName = findUserName(key.email);
+    let email = key.email;
+
+    return{
+        name: name,
+        height: height,
+        location: location,
+        userName: userName,
+        email: email
+      }
+
+  })
+}
+
+console.log(changedJSON(users));
