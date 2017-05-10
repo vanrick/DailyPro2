@@ -50,46 +50,39 @@ const users = [
 //the height should be converted from inches to centimeters
 //the location should be enumerated
 //if the user has a username use that otherwise use the email before the @
-let locationKey = {
+let locationKey ={
   US: 1,
   UK: 2,
-  SK: 3,
+  SK: 3
 }
 
-function namez(first_name, last_name) {
-  return first_name + " " + last_name
+function combineNames(first_name, last_name){
+  return first_name + ' ' + last_name;
 }
-
-function height_converter(height){
+function heightConverter(height){
   return Math.ceil(height * 2.54)
 }
-
+function getUserName(userName){
+  let index = userName.indexOf('@');
+  return userName.split('').splice(0,index).join('');
+}
 function enumerateLocation(location, locationKey){
-  return locationKey[location]
+  return locationKey[location];
 }
-// console.log(enumerateLocation('UK', locationKey));
-function findUserName(email){
-  let index = email.indexOf('@');
-  return email.split('').splice(0,index).join('');
-}
-// console.log(findUserName('howie@gmail.com'))
-function changedJSON(users){
+function convertedJSON(users){
   return users.map(function(key){
-    let name = namez(key.first_name, key.last_name);
-    let height = height_converter(key.height);
+    let name = combineNames(key.first_name, key.last_name);
+    let height = heightConverter(key.height);
     let location = enumerateLocation(key.locations, locationKey);
-    let userName = findUserName(key.email);
-    let email = key.email;
-
-    return{
-        name: name,
-        height: height,
-        location: location,
-        userName: userName,
-        email: email
-      }
-
+    let userName = getUserName(key.email);
+    let email = key.email
+    return {
+      name: name,
+      height: height,
+      locations: location,
+      userName: userName,
+      email: email
+    }
   })
 }
-
-console.log(changedJSON(users));
+console.log(convertedJSON(users));
