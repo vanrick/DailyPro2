@@ -12,7 +12,6 @@ let singles = {
   '9': 'nine',
 }
 let teens = {
-  '10': 'ten',
   '11': 'eleven',
   '12': 'twelve',
   '13': 'thirteen',
@@ -24,6 +23,7 @@ let teens = {
   '19': 'nineteen'
 }
 let tens ={
+  '10': 'ten',
   '20': 'twenty',
   '30': 'thirty',
   '40': 'forty',
@@ -34,31 +34,68 @@ let tens ={
   '90': 'ninety'
 }
 let hundreds = {
-  '100': 'one hundred'
+  '100': 'one hundred',
+  '200': 'two hundred',
+  '300': 'three hundred',
+  '400': 'four hundred',
+  '500': 'five hundred',
+  '600': 'six hundred',
+  '700': 'seven hundred',
+  '800': 'eight hundred',
+  '900': 'nine hundred',
 }
-
-function singleNumber(single, singles){
-  return singles[single]
+let thousands = {
+  '1000': 'one thousand'
 }
-function teenNumber(teen, teens){
-  return teens[teen]
+function reversy(num){
+  return String(num).split('').reverse().join('')
 }
-function tenNumber(ten, tens){
-  return tens[ten]
-}
-function hundredNumber(hundred,hundreds){
-  return hundreds[hundred]
-}
-function wordsToNumber(num){
-  num = String(num).split('')
-  for (var i = 0; i < num.length; i++) {
-    if (num.length === 1) {
-      console.log(singleNumber(num, singles));
-      return singleNumber(num, singles)
-    }else{
-
-    }
+function three(num){
+  num = String(num)
+  if (num.length === 3 && num[1] == '0' && num[2] == '0'){
+    console.log(hundreds[num]);
+    return hundreds[num]
+  }else if(num[1] == '0'){
+    console.log(hundreds[num[0]+'0'+'0']+' and '+singles[num[2]]);
+    return hundreds[num[0]+'0'+'0']+' and '+singles[num[2]]
+  }else if(num[2] == '0'){
+    console.log(hundreds[num[0]+'0'+'0']+' and '+tens[num[1]+'0'])
+    return hundreds[num[0]+'0'+'0']+' and '+tens[num[1]+'0']
+  }else{
+    console.log(hundreds[num[0]+'0'+'0']+' and '+tens[num[1]+'0']+singles[num[2]]);
+    return hundreds[num[0]+'0'+'0']+' and '+tens[num[0]+'0']+singles[num[2]]
   }
-  return console.log("not");
 }
-wordsToNumber(10)
+
+function numToEng(num){
+  num = String(num)
+  if (num == '1000') {
+    console.log(thousands[num]);
+    return thousands[num]
+  }
+  if (num.length == 4) {
+    return console.log('nah');
+  }
+  if (num.length > 4) {
+    return console.log('hell nah');
+  }
+  if (num.length == 3) {
+    return three(num)
+  }
+  if (num.length < 2) {
+    console.log(singles[num[0]]);
+    return singles[num[0]]
+  }else if(teens[num]){
+    console.log(teens[num]);
+    return teens[num]
+  }else if(num[1] === '0'){
+    console.log(tens[num]);
+    return tens[num]
+  }else{
+    let twoNums = tens[num[0]+'0']+singles[num[1]]
+    console.log(twoNums);
+    return twoNums
+  }
+  return console.log('please enter a number between 0 - 1000');
+}
+numToEng(980)
