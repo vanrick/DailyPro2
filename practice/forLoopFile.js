@@ -10,10 +10,3 @@ const threeDArray = [
 // let array2 = [].concat.apply([],threeDArray)
 
 console.log([].concat.apply([],[].concat.apply([],[].concat.apply([],threeDArray))));
-
-function flat(threeDArray){
-  
-  for (var i = 0; i < 3; i++) {
-    console.log([].concat.apply([],));
-  }
-}
