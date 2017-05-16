@@ -1,4 +1,5 @@
 
+
 let singles = {
   '0': 'zero',
   '1': 'one',
@@ -56,18 +57,18 @@ function three(num){
     console.log(hundreds[num]);
     return hundreds[num]
   }else if(num[1] == '0'){
-    console.log(hundreds[num[0]+'0'+'0']+' and '+singles[num[2]]);
-    return hundreds[num[0]+'0'+'0']+' and '+singles[num[2]]
+    console.log(hundreds[num[0]+'0'+'0']+' '+singles[num[2]]);
+    return hundreds[num[0]+'0'+'0']+' '+singles[num[2]]
   }else if(num[2] == '0'){
-    console.log(hundreds[num[0]+'0'+'0']+' and '+tens[num[1]+'0'])
-    return hundreds[num[0]+'0'+'0']+' and '+tens[num[1]+'0']
+    console.log(hundreds[num[0]+'0'+'0']+' '+tens[num[1]+'0'])
+    return hundreds[num[0]+'0'+'0']+' '+tens[num[1]+'0']
   }else{
-    console.log(hundreds[num[0]+'0'+'0']+' and '+tens[num[1]+'0']+singles[num[2]]);
-    return hundreds[num[0]+'0'+'0']+' and '+tens[num[0]+'0']+singles[num[2]]
+    console.log(hundreds[num[0]+'0'+'0']+' '+tens[num[1]+'0']+'-'+singles[num[2]]);
+    return hundreds[num[0]+'0'+'0']+" "+tens[num[1]+'0']+'-'+singles[num[2]]
   }
 }
 
-function numToEng(num){
+function inEnglish(num){
   num = String(num)
   if (num == '1000') {
     console.log(thousands[num]);
@@ -92,10 +93,12 @@ function numToEng(num){
     console.log(tens[num]);
     return tens[num]
   }else{
-    let twoNums = tens[num[0]+'0']+singles[num[1]]
+    let twoNums = tens[num[0]+'0']+'-'+singles[num[1]]
     console.log(twoNums);
     return twoNums
   }
   return console.log('please enter a number between 0 - 1000');
 }
-numToEng(980)
+inEnglish(123)
+
+module.exports = {inEnglish}

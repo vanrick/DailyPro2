@@ -1,4 +1,4 @@
-var say = require('../solutions/yourfile.js');
+var say = require('../rv_solution.js');
 var assert = require('assert');
 
 describe('say', function () {
@@ -7,31 +7,31 @@ describe('say', function () {
     assert.equal(say.inEnglish(0), 'zero');
   });
 
-  xit('one', function () {
+  it('one', function () {
     assert.equal(say.inEnglish(1), 'one');
   });
 
-  xit('fourteen', function () {
+  it('fourteen', function () {
     assert.equal(say.inEnglish(14), 'fourteen');
   });
 
-  xit('twenty', function () {
+  it('twenty', function () {
     assert.equal(say.inEnglish(20), 'twenty');
   });
 
-  xit('twenty-two', function () {
+  it('twenty-two', function () {
     assert.equal(say.inEnglish(22), 'twenty-two');
   });
 
-  xit('one hundred', function () {
+  it('one hundred', function () {
     assert.equal(say.inEnglish(100), 'one hundred');
   });
 
-  xit('one hundred twenty-three', function () {
+  it('one hundred twenty-three', function () {
     assert.equal(say.inEnglish(123), 'one hundred twenty-three');
   });
 
-  xit('one thousand', function () {
+  it('one thousand', function () {
     assert.equal(say.inEnglish(1000), 'one thousand');
   });
 
