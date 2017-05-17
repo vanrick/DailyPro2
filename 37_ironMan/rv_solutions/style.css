@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Yeseva+One');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+  background-color: maroon;
+}
+.row{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+.row .s12 h1{
+  letter-spacing: -8px;
+}
+.row .s12 h5{
+  margin: -2.5% 0 0 0;
+  letter-spacing: -2px;
+}
+.circle:before {
+  content: ' \25CF';
+  font-size: 900px;
+}
+.circle{
+  margin: -30% 0 0 0;
+}
