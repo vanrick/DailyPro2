@@ -17,40 +17,21 @@ var states = [
   {id: 10, name: "South Carolina"}
 ]
 
-function cityWithId(city_name){
-  return city_name.map(function(city){
-    let id = city.id;
-    let name = city.name;
-    return {
-      id: id,
-      name: name
-    }
-  })
-
-}
-// console.log(cityWithId(cities, states));
-function stateWithId(state_name){
-  return state_name.map(function(state){
-    let id = state.id;
-    let name = state.name;
-    return{
-      id: id,
-      name: name
-    }
+function join(left, right, fk, pk, newKey){
+  return left.map(function(left_obj){
+    left_obj[newKey] = matchingStates(left_obj[fk],right)
+    delete left_obj[fk]
+    return left_obj
   })
 }
-var inventory = [
-    {name: 'apples', quantity: 2},
-    {name: 'bananas', quantity: 0},
-    {name: 'cherries', quantity: 5}
-];
+console.log(join(cities, states,'state_id', 'id','state'));
 
-function findCherries(fruit) {
-    return fruit.name == 'Denver';
-}
-
-console.log(cities.find(findCherries));
-
-function join(left, right, foreignKey, primaryKey, newKey){
-  return
+function matchingStates(id, right){
+  let return_obj = {}
+   right.forEach(function(key){
+    if (id == key.id) {
+      return_obj = key
+    }
+  })
+  return return_obj
 }
