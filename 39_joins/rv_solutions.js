@@ -16,22 +16,22 @@ var states = [
   {id: 22, name: "Illinois"},
   {id: 10, name: "South Carolina"}
 ]
-
-function join(left, right, fk, pk, newKey){
-  return left.map(function(left_obj){
-    left_obj[newKey] = matchingStates(left_obj[fk],right)
-    delete left_obj[fk]
-    return left_obj
-  })
-}
-console.log(join(cities, states,'state_id', 'id','state'));
-
-function matchingStates(id, right){
-  let return_obj = {}
-   right.forEach(function(key){
-    if (id == key.id) {
-      return_obj = key
-    }
-  })
-  return return_obj
-}
+//
+// function join(left, right, fk, pk, newKey){
+//   return left.map(function(left_obj){
+//     left_obj[newKey] = matchingStates(left_obj[fk],right)
+//     delete left_obj[fk]
+//     return left_obj
+//   })
+// }
+// console.log(join(cities, states,'state_id', 'id','state'));
+//
+// function matchingStates(id, right){
+//   let return_obj = {}
+//    right.forEach(function(key){
+//     if (id == key.id) {
+//       return_obj = key
+//     }
+//   })
+//   return return_obj
+// }
