@@ -35,21 +35,21 @@ var states = [
   {id: 22, name: "Illinois"},
   {id: 10, name: "South Carolina"}
 ]
-function join(left, right, foreignKey, primaryKey, newKey){
-  return left.map(function(joinedObj){
-    joinedObj[newKey] = matchingStatesWithFK(right, joinedObj[foreignKey]);
-    delete joinedObj[foreignKey]
-    return joinedObj
+function matchingStatesWithFK(states, fk){
+  let result = {}
+  states.forEach(function(state){
+    if (state.id === fk) {
+      result = state
+    }
+  })
+  return result
+}
+// console.log(matchingStatesWithFK(states, 1));
+function join(left, right, fk, pk, newKey){
+  return left.map(function(obj){
+    obj[newKey] = matchingStatesWithFK(right, obj[fk]);
+    delete obj[fk]
+    return obj
   })
 }
 console.log(join(cities, states, 'state_id', states.id, 'state'));
-function matchingStatesWithFK(states, fk){
-  let obj = {}
-  states.forEach(function(newKey){
-    if (newKey.id == fk) {
-      obj = newKey
-    }
-  })
-  return obj
-}
-// console.log(matchingStatesWithFK(states, 1));
