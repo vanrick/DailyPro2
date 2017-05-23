@@ -3,7 +3,7 @@ const users = [
     first_name:'John',
     last_name:'Snow',
     height:77,
-    locations:'UK',  //US=1, UK=2, SK=3
+    location:'UK',  //US=1, UK=2, SK=3
     userName:'neverDie',
     email:'john@blackCrow.com'
   },
@@ -11,14 +11,14 @@ const users = [
     first_name:'Eric',
     last_name:'Cartman',
     height:54,
-    locations:'US',
+    location:'US',
     email:'the_coon@sp.com'
   },
   {
     first_name:'Whinny',
     last_name:'the Pooh',
     height:26,
-    locations:'SK',
+    location:'SK',
     email:'honey_lover@pooh.com'
   }
 ]
@@ -50,39 +50,38 @@ const users = [
 //the height should be converted from inches to centimeters
 //the location should be enumerated
 //if the user has a username use that otherwise use the email before the @
-let locationKey ={
-  US: 1,
-  UK: 2,
-  SK: 3
-}
 
-function combineNames(first_name, last_name){
-  return first_name + ' ' + last_name;
-}
-function heightConverter(height){
-  return Math.ceil(height * 2.54)
-}
-function getUserName(userName){
-  let index = userName.indexOf('@');
-  return userName.split('').splice(0,index).join('');
-}
-function enumerateLocation(location, locationKey){
-  return locationKey[location];
-}
-function convertedJSON(users){
-  return users.map(function(key){
-    let name = combineNames(key.first_name, key.last_name);
-    let height = heightConverter(key.height);
-    let location = enumerateLocation(key.locations, locationKey);
-    let userName = getUserName(key.email);
-    let email = key.email
-    return {
+function newArray(array) {
+  let locations = {
+    'US': 1,
+    'UK': 2,
+    'UX': 3
+  };
+
+  let result = [];
+
+  for (var i = 0; i < array.length; i++) {
+    let name = array[i].first_name + " " + array[i].last_name;
+    let height = array[i].height * 2.54;
+    let index = array[i].email.indexOf('@');
+
+    if(!array[i].userName){
+      var username = array[i].email.slice(0, index);
+    } else {
+      var username = array[i].userName;
+    }
+
+    result.push({
       name: name,
       height: height,
-      locations: location,
-      userName: userName,
-      email: email
-    }
-  })
+      location: locations[array[i].location],
+      username: username,
+      email: array[i].email
+    });
+
+  }
+  console.log(result);
+  return result;
 }
-console.log(convertedJSON(users));
+
+newArray(users);
