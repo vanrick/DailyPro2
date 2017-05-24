@@ -20,4 +20,4 @@ function anie(word,ana){
 }
 
 // console.log(anie(word,ana));
-console.log(anie(word,num));
+console.log(anie(word,anaLong));
