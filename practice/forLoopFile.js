@@ -22,21 +22,21 @@ const threeDArray = [
 // flattenArray(threeDArray)
 
 function steamrollArray(threeDArray) {
-  var flatArray = [];
+  let flatArray = [];
 
   flatten(threeDArray);
 
   function flatten(array) {
-    for (var i = 0; i < array.length; i++) {
-      if (Array.isArray(array[i])) {
-        flatten(array[i]);
-      } else {
-        flatArray.push(array[i]);
+    array.forEach(function(newArr){
+      if (Array.isArray(newArr)) {
+        flatten(newArr)
+      }else{
+        flatArray.push(newArr)
       }
-    }
+    })
   }
-
-  return flatArray;
+  return flatArray
 }
+
 
 console.log(steamrollArray(threeDArray))
