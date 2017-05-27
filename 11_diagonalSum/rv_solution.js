@@ -44,4 +44,4 @@ function revSum(input){
   return bucket
 }
 
-revSum(sqr4)
+revSum(sqr5)
