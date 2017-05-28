@@ -12,8 +12,8 @@
 // console.log(palidromic(pali));
 
 let matrix2x3 = [[1, 64, 23],
-
                 [22, 50, 2]]
+                
 let matrix3x2 = [[22,1],
                 [50,64],
                 [2,23]]
