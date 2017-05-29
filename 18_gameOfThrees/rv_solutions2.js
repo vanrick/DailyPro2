@@ -1,0 +1,16 @@
+function gameOfThrees(num){
+  if (num == 1) {
+    return console.log(1);
+  }
+  if (num % 3 == 0) {
+    console.log(num + ' 0');
+    gameOfThrees(num/3)
+  }else if ((num+1) % 3 == 0) {
+    console.log(num + '+1');
+    gameOfThrees((num+1)/3)
+  }else if ((num-1) % 3 == 0) {
+    console.log(num + '-1');
+    gameOfThrees((num-1)/3)
+  }
+}
+gameOfThrees(100)

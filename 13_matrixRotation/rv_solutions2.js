@@ -16,20 +16,14 @@ let matrix2 =
 
 function flipMatrix(matrixArr){
   let result = []
-  for (var i = 0; i < matrixArr[0].length; i++) {
-    // console.log('top: ',matrixArr[0]);
-    let tempResults = []
-    for (var j = matrixArr.length-1; j >= 0; j--) {
-      // console.log('bottom J: ',j);
-      // console.log('bottom I: ',i);
-      // console.log('bottom i: ', matrixArr[i]);
-      // console.log('bottom j: ', matrixArr[j]);
-      // console.log('bottom j i: ',matrixArr[j][i])
-      tempResults.push(matrixArr[j][i])
+    for (var i = 0; i < matrixArr[0].length; i++) {
+      let tempResults = []
+      for (var j = matrixArr.length-1; j >=0 ; j--) {
+        tempResults.push(matrixArr[j][i])
+      }
+      result.push(tempResults)
     }
-    result.push(tempResults)
-  }
+    console.log(result);
   return result
 }
-// flipMatrix(matrix)
-console.log(flipMatrix(matrix2));
+flipMatrix(matrix)
