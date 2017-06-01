@@ -17,13 +17,16 @@ function sentenceIntoMath(mathQuestion){
       result.push(Number(mathConversion[i]))
     }
     if (mathConversion[i] == 'minus') {
-      result.push(mathConversion[i] - mathConversion[i+1])
+      let a = result
+      let b = result
+      // result.push(mathConversion[i-1] - mathConversion[i+1])
     }else if (mathConversion[i] == 'plus' ||  mathConversion[i] == 'and') {
-      result.push(Number(mathConversion[i]) + Number(mathConversion[i+1]))
+      console.log(result);
+      // result.push(Number(mathConversion[i-1]) + Number(mathConversion[i+1]))
     }else if (mathConversion[i] == 'divided') {
-      result.push(Number(mathConversion[i]) / Number(mathConversion[i+1]))
+      // result.push(Number(mathConversion[i-1]) / Number(mathConversion[i+1]))
     }else if (mathConversion[i] == 'multiply') {
-      result.push(Number(mathConversion[i]) * Number(mathConversion[i+1]))
+      // result.push(Number(mathConversion[i-1]) * Number(mathConversion[i+1]))
     }
  }
  console.log(result)
