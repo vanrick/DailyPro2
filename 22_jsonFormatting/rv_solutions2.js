@@ -23,19 +23,16 @@ let oldJSON = {
 
 function newJSON(json){
   let keys = Object.keys(json)
-  // console.log(keys);
   let result = {}
   for (var i = 0; i < keys.length; i++) {
     let arraysOfAuthors = oldJSON[keys[i]]
     for (var j = 0; j < arraysOfAuthors.length; j++) {
-      
-      if (arraysOfAuthors[j].id == 1) {
+      result.author = []
 
       }
-
     }
+    console.log(result);
   }
-  return result
-}
+
 
 newJSON(oldJSON)
