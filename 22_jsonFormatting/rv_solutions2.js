@@ -20,19 +20,35 @@ let oldJSON = {
       }
     ]
 }
+function makingAuthorArr(json){
+  let keys = Object.keys(json);
+  let authorArr = []
+  for (var i = 0; i < keys.length; i++) {
+    let objArr = json[keys[i]]
+    for (var j = 0; j < objArr.length; j++) {
+      if (keys[i].indexOf('1') > -1 ) {
+        authorArr.push({
+          'id': objArr[j].author_id,
+          'name': objArr[j].author_name
+        })
+      }
 
+    }
+  }
+  console.log(authorArr);
+  return authorArr
+}
 function newJSON(json){
   let keys = Object.keys(json)
   let result = {}
   for (var i = 0; i < keys.length; i++) {
     let arraysOfAuthors = oldJSON[keys[i]]
     for (var j = 0; j < arraysOfAuthors.length; j++) {
-      result.author = []
-
+      json[arraysOfAuthors[j]] = []
       }
     }
-    console.log(result);
+    // console.log(json);
   }
 
-
+makingAuthorArr(oldJSON)
 newJSON(oldJSON)
