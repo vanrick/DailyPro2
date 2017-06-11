@@ -31,4 +31,3 @@ function fibonacci(num){
    }
    return result
  }
- console.log(reverseString('hello'));
