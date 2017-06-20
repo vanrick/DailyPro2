@@ -4,6 +4,8 @@ function splitArray(arr, num){
   let divisor = arr.length/num
   let = result = []
   for (var i = 0; i < num; i++) {
+    console.log(i*divisor);
+    console.log(arr.slice(i*divisor, i*divisor + divisor));
     result.push(arr.slice(i*divisor, i*divisor + divisor))
   }
   console.log(result);
@@ -12,7 +14,7 @@ function splitArray(arr, num){
 
 let array = [1,2,3,4,5,6]
 // slice(0,2) (2,4) (4,6)
-splitArray(array,3)
+splitArray(array,2)
 
 function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
