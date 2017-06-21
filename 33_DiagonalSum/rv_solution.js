@@ -11,7 +11,7 @@ function sumz(num){
   for (var i = 0; i < num.length; i++) {
     // bucket += num[i][i] + num[i][num.length - i -1]
     console.log(num[i][i])
-    console.log(num[i][num.length - i - 1]);
+    console.log(num[i][num.length - 1 - i]);
   }
   console.log('bucket: ',bucket);
   return bucket
