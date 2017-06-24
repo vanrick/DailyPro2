@@ -38,7 +38,8 @@ function wordy(word){
           together.push(symbols[i])
         }
       }
-  console.log(eval(together.join(' ')));
+      console.log(eval(together));
+  // console.log(eval(together.join(' ')));
   return eval(together.join(' '))
 }
 
