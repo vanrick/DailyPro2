@@ -44,4 +44,31 @@ let hundreds = {
   '900': 'nine hundred',
 }
 
-function
+function say(num){
+  let wordedNumbers = ''
+  num = String(num).split('');
+  if (num.length < 2) {
+    wordedNumbers = singles[num]
+  }else if (teens[num.join('')]) {
+    wordedNumbers = teens[num.join('')]
+  }else if (tens[num.join('')]) {
+    wordedNumbers = tens[num.join('')]
+  }else if (hundreds[num.join('')]) {
+    wordedNumbers = hundreds[num.join('')]
+  }
+  for (var i = 0; i < num.length; i++) {
+    if (num.length==2 && tens[num[0]+num[1]]) {
+      wordedNumbers = tens[num[0]+num[1]]
+    }else if (num.length==2 && tens[num[0]+'0'] && singles[num[1]]) {
+      wordedNumbers = tens[num[0]+'0']+'-'+singles[num[1]]
+    }else if (num.length==3 && hundreds[num[0]+'0'+'0'] && singles[num[2]]) {
+      wordedNumbers = hundreds[num[0]+'0'+'0'] +' and '+singles[num[2]]
+    }
+  }
+
+
+  console.log(wordedNumbers);
+  return wordedNumbers
+}
+
+say(122)
