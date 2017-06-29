@@ -23,11 +23,3 @@ function fibonacci(num){
 }
 
  console.log(fibonacci(7));
-
- function reverseString(str){
-   let result = ''
-   for (var i = str.length-1; i >= 0; i--) {
-    result += str[i]
-   }
-   return result
- }
