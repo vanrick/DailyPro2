@@ -1,14 +1,14 @@
-function garland(word){
+function garland(str){
   let degree = 0
-  word = word.toLowerCase().split('').join('')
-  console.log(word);
-  for (var i = 1; i < word.length; i++) {
-    let front = word.slice(0,i)
-    // console.log(front);
-    let back = word.slice(word.length-i, word.length)
- }
+  str = str.toLowerCase()
+  for (var i = 0; i < str.length; i++) {
+   let front = str.slice(0,i);
+   let back = str.slice(str.length-i, str.length);
+   if (front === back) {
+     degree = front.length
+   }
+  }
   return degree
 }
 
-
-garland('onion')
+console.log(garland('oniononionion'));
