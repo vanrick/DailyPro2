@@ -1,16 +1,14 @@
-function garland(str){
+function garland(word){
   let degree = 0
-  for (var i = 1; i < str.length; i++) {
-    let front = str.slice(0,i)
-    let back = str.slice(-i)
-    // for (var j = 1; j <= i; j++) {
-    //   let back = str.slice(-j)
-      if (front == back && front.length > degree) {
-        degree = front.length
-      }
-    // }
-  }
+  word = word.toLowerCase().split('').join('')
+  console.log(word);
+  for (var i = 1; i < word.length; i++) {
+    let front = word.slice(0,i)
+    // console.log(front);
+    let back = word.slice(word.length-i, word.length)
+ }
   return degree
 }
 
-console.log(garland('hotshots'));
+
+garland('onion')
