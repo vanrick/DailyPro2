@@ -23,7 +23,7 @@ function recurSums(num) {
   if (String(result).length > 1) {
     recurSums(result)
   }else{
-    console.log(result);
+    // console.log(result);
     return result
   }
 }

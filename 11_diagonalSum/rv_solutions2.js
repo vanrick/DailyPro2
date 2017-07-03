@@ -29,19 +29,3 @@ function diagSum(numArray){
 
 
 console.log(diagSum(square4x4));
-
-function fizzBuzz(num){
-  if (num == 1) {
-    return
-  }
-  if (num % 3 == 0 && num % 5 == 0) {
-    console.log('fizzBuzz');
-  }else if(num % 3 == 0){
-    console.log('fizz');
-  }else if(num % 5 == 0){
-    console.log('buzz');
-  }else{
-    console.log(num);
-  }
-  fizzBuzz(num-1)
-}

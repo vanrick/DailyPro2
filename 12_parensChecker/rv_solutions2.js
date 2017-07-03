@@ -17,4 +17,4 @@ for (var i = 0; i < parentheses.length; i++){
   return true
 }
 
-console.log(parensChecker(parTest));
+console.log(parensChecker(parTest3));
