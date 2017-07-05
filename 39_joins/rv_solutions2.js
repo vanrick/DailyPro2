@@ -16,23 +16,22 @@ var states = [
   {id: 22, name: "Illinois"},
   {id: 10, name: "South Carolina"}
 ]
-function stateObj(state,fk){
-  let obj = {}
-  state.forEach(function(ele){
-    if (ele.id === fk) {
-      obj = ele
+
+function right_obj(state, fk){
+  let returnObj = {}
+   state.forEach(function(state_obj){
+    if (state_obj.id === fk) {
+     returnObj = state_obj
     }
   })
-  return obj
+  return returnObj
 }
-
 
 function join(left, right, foreignKey, primaryKey, newKey) {
   return left.map(function(left_obj){
-    left_obj[newKey] = stateObj(right, left_obj[foreignKey]);
+    left_obj[newKey] = right_obj(right, left_obj[foreignKey])
     delete left_obj[foreignKey]
     return left_obj
   })
 }
-
-console.log(join(cities, states, 'state_id','id','state'));
+console.log(join(cities, states, 'state_id', 'id', 'state'));
