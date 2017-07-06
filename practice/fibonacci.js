@@ -12,7 +12,7 @@ var fibonacci_series = function (n)
   }
 };
 
- // console.log(fibonacci_series(7));
+
 
 function fibonacci(num){
   if (num < 2) {
