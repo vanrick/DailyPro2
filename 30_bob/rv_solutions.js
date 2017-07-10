@@ -2,13 +2,12 @@
 function bob(question){
   let statement = ''
   question = question.split('')
-  // console.log(question[question.length-1]);
-  // console.log(question.join('').toLowerCase());
+  // console.log(question);
   if (question[question.length-1] === '?') {
     statement = 'Sure.'
-  }else if (question[question.length-1] === '!' || question.join('') === question.join('').toUpperCase()) {
+  }else if (question[question.length-1] === '!') {
     statement = 'Whoa, chill out!'
-  }else if (question === '') {
+  }else if (question.join().trim() === '') {
     statement = 'Fine. Be that way!'
   }else {
     statement = 'Whatever'
@@ -17,4 +16,4 @@ function bob(question){
   return statement
 }
 
-bob('HEY')
+bob('')
