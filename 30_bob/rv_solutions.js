@@ -16,4 +16,4 @@ function bob(question){
   return statement
 }
 
-bob('')
+bob(' ')

@@ -19,3 +19,18 @@ function recursiveFizzBuzz(num){
 }
 
 recursiveFizzBuzz(100)
+
+function addOne(array) {
+  function recursion(array, index) {
+    // base case
+    if (array.length == index) {
+      return array
+    }
+    array[index]++
+    return recursion(array, index + 1)
+  }
+  array = recursion(array, 0)
+  return array
+}
+
+console.log(addOne([1,2,3,4]))
