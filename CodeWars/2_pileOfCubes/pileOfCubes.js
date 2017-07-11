@@ -9,3 +9,5 @@ function findNb(m) {
     // }
 }
 findNb(1071225)
+
+console.log('find the cube');
