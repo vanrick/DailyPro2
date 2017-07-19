@@ -17,6 +17,7 @@ function findOutlier(integers){
   }else {
     return even[0]
   }
+  // return Math.min(even.length, odds.length)
 }
 
 console.log(findOutlier(findEven));
