@@ -8,14 +8,14 @@ function divisors(integer) {
         result.push(integer/i)
       }
     }
-  if (result.length > 0) {
+  if (result.length) {
     return result.reverse()
   }else {
     return prime
   }
 }
 
-console.log(divisors(12));
+console.log(divisors(13));
 
 
 
