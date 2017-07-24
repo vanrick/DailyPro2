@@ -1,11 +1,11 @@
 function duplicateCount(text){
-  text = text.toLowerCase().split('')
-  let obj = null
-  return text.reduce((accumulator,currentValue,index)=>{
-    (accumulator[currentValue])?accumulator[currentValue]++:accumulator[currentValue]=1
-      obj = accumulator
-  },{})
-  console.log(obj);
+  let array = [];
+  let dups = []
+    text.toLowerCase().split('').forEach((ele)=>{
+      if (array.indexOf(ele)<0) array.push(ele)
+      else if (dups.indexOf(ele)<0) dups.push(ele)
+    })
+  return dups
 }
 
 console.log(duplicateCount('Indivisibilities'))
