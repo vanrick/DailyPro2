@@ -1,5 +1,6 @@
 let findOdd = [2, 4, 0, 100, 4, 11, 2602, 36]
 let findEven = [160, 3, 1719, 19, 11, 13, -21]
+let findOdd2 = [2, 4, 0, 100, 4, -11, 2602, 36]
 
 
 function findOutlier(integers){
@@ -8,7 +9,7 @@ function findOutlier(integers){
   integers.forEach((ele)=>{
     if (ele % 2 == 0) {
       even.push(ele)
-    }else if (ele % 2 == 1) {
+    }else if (ele % 2 == 1 || ele % 2 == -1) {
       odds.push(ele)
     }
   })
@@ -17,7 +18,6 @@ function findOutlier(integers){
   }else {
     return even[0]
   }
-  // return Math.min(even.length, odds.length)
 }
 
-console.log(findOutlier(findEven));
+console.log(findOutlier(findOdd2));
