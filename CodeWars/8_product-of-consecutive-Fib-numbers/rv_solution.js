@@ -1,8 +1,23 @@
-function fibonaccis(num){
-  let max = num,
+function fibonacci(num){
+  let result = [0,1],
+      max = num,
       index = 1,
-      
+      next = null
+  do {
+    index++
+    console.log('ind-2 ',index-2);
+    console.log('ind-1 ',index-1);
+    next = result[index-2]+result[index-1]
+    if (next <= max)
+    console.log('next ',next);
+    console.log('max ', max);
+    result[index]=next
+    console.log('next2 ',next);
+  } while (next < max);
+  console.log(result);
 }
+
+fibonacci(7)
 
 
 
