@@ -16,7 +16,7 @@ let num2 = 11
 
 function add(num1){
   let answers = 0
-  return function itz(num2){
+  return function(num2){
     answers = (num1 + num2)
     return answers
   }
