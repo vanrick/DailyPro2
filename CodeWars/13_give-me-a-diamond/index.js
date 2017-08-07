@@ -1,7 +1,9 @@
 function diamond(n){
 
   return diam;
+
 }
+diamond(5)
 
 
 
