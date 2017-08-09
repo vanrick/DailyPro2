@@ -3,7 +3,7 @@ function diamond(n){
   return diam;
 
 }
-diamond(5)
+diamond(7)
 
 
 
