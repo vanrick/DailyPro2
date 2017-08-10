@@ -1,6 +1,7 @@
 function diamond(n){
-
-  return diam;
+  console.log('new line'+'\n'+'other line');
+  
+  // return diam;
 
 }
 diamond(7)
