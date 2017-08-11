@@ -1,13 +1,33 @@
 function diamond(n){
   if (n < 0 || n%2==0) return null
-  for (var i = 0; i < n; i++) {
-    n[i]
+  let result = ''
+  let till = Math.ceil(n/2)
+  let s = spaces(n)
+  for (var i = 0; i < till; i++) {
+    if (i == 0) {
+      result += "*"
+      console.log(s+result);
+    }else{
+      result += "**"
+      console.log(s + result);
+    }
+    s = s.slice(0,-1)
   }
-  // console.log('new line'+'\n'+'other line');
-
-
+  for (var i = 0; i < till-1; i++) {
+    result = result.slice(0,-2)
+    s += ' '
+    console.log(s+result)
+  }
 }
-console.log(diamond(5));
+
+function spaces(num){
+  let result = ''
+  for (var i = 0; i < Math.floor(num/2); i++) {
+    result += ' '
+  }
+  return result
+}
+diamond(5)
 
 
 
