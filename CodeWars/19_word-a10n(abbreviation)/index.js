@@ -1,5 +1,5 @@
 function abbreviate(str){
-  let splitStr = str.split(' ')
+  let splitStr = str.split('')
   console.log(splitStr);
   let noNon = str.replace(/\W+/g, " ").trim().split(' ')
   let nonWordCharacters = []
