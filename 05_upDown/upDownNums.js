@@ -2,7 +2,7 @@
 //05 upDown
 
 var nums = [6,3,5,4,3,4,4,5]
-var str = 'extra long coney dog'
+var str = 'extra long coney dog1'
 
 function numm(input){
   if (Number.isInteger(Number(input.split('').join(''))) == true) {
