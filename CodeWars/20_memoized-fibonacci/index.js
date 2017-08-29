@@ -19,3 +19,4 @@ console.log(memoized(5));
 console.log(tablez);
 function fib(num){if (num < 2) return num
 else return fib(num-2)+fib(num-1)}
+for (var i = 0; i < 5; i++) console.log(i)
