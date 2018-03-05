@@ -17,4 +17,4 @@ function parensChecker(parentheses) {
     return true
 }
 
-console.log(parensChecker(parentheses3));
+console.log(parensChecker(parentheses2));
