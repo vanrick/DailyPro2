@@ -13,9 +13,14 @@ var matrix1 = [
 function rotateMatrix(matrix) {
     let result = []
     for (let i = 0; i < matrix[0].length; i++) {
-
-
+        let tempArr = []
+        for (let j = matrix.length - 1; j >= 0; j--) {
+            tempArr.push(matrix[j][i])
+        }
+        result.push(tempArr)
     }
+    console.log(result);
+
     return result
 }
 

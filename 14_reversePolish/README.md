@@ -25,7 +25,7 @@ If an operator is input, get the last 2 values and operate on them.
 | 3 | 17,3 |
 | - | 14 |
 
-`1 2 + 4 5 6 8 x - + +`
+`1 2 + 4 5 6 8 × - + +`
 
 | INPUT | STACK |
 | ----- | ----- |
