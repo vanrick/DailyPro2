@@ -15,16 +15,17 @@
 // sumToSingle(12345)
 
 function recurSums(num) {
-  let result = 0
-  num = String(num).split('');
-  num.forEach(function(ele){
-    result += Number(ele)
-  })
-  if (String(result).length > 1) {
-    recurSums(result)
-  }else{
-    // console.log(result);
-    return result
-  }
+    let result = 0
+    num = String(num).split('');
+    num.forEach(function(ele) {
+        result += Number(ele)
+    })
+    if (String(result).length > 1) {
+        recurSums(result)
+    } else {
+        // console.log(result);
+        return result
+    }
 }
+console.log(recurSums(12345));
 recurSums(12345)
