@@ -41,7 +41,7 @@ function authorArray(obj) {
 
 function jsonFormatter(obj) {
     let keys = Object.keys(obj)
-    let result = []
+    let result = [].
 }
 authorArray(booksObj)
 jsonFormatter(booksObj)
