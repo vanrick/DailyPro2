@@ -1,3 +1,7 @@
+let x = require('./books.json')
+console.log(x);
+
+
 let booksObj = {
     "books": [{
             "id": 1,
@@ -20,22 +24,41 @@ let booksObj = {
     ]
 }
 
-function jsonConverter(obj) {
-    let keys = Object.keys(obj)
-        // console.log(keys);
-    let result = {}
-    for (let i = 0; i < keys.length; i++) {
-        // console.log(obj[keys]);
-        let inside = obj[keys]
-        for (let j = 0; j < inside.length; j++) {
-            // console.log(inside[j]['id']);
-            if (inside[j]['id'] == 1) {
-                console.log(inside[j]);
+function makingAuthorArr(json) {
+    let keys = Object.keys(json);
+    let authorArr = []
+    for (var i = 0; i < keys.length; i++) {
+        let objArr = json[keys[i]]
+            // console.log(objArr);
+        if (json[keys[i]].indexOf('1') == -1) {
+            console.log('hit');
 
-            }
-
+            authorArr.push({
+                'id': json[keys[i]].author_id,
+                'name': json[keys[i]].author_name
+            })
         }
+
+        for (var j = 0; j < objArr.length; j++) {}
     }
+    console.log(authorArr);
+    return authorArr
 }
 
-jsonConverter(booksObj)
+makingAuthorArr(booksObj)
+    // function jsonConverter(obj) {
+    //     let keys = Object.keys(obj)
+    //     let result = {}
+    //     for (let i = 0; i < keys.length; i++) {
+    //         let inside = obj[keys]
+    //         for (let j = 0; j < inside.length; j++) {
+    //             if (inside[j]['id'] == 1) {
+    //                 console.log(inside[j]);
+
+//             }
+
+//         }
+//     }
+// }
+
+// jsonConverter(booksObj)
