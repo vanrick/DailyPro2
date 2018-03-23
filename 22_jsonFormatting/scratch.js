@@ -1,5 +1,5 @@
 let x = require('./books.json')
-console.log(x);
+    // console.log(x);
 
 
 let booksObj = {
@@ -24,41 +24,46 @@ let booksObj = {
     ]
 }
 
-function makingAuthorArr(json) {
-    let keys = Object.keys(json);
-    let authorArr = []
-    for (var i = 0; i < keys.length; i++) {
-        let objArr = json[keys[i]]
-            // console.log(objArr);
-        if (json[keys[i]].indexOf('1') == -1) {
-            console.log('hit');
+// function makingAuthorArr(json) {
+//     let authorArr = []
+//     for (var i = 0; i < keys.length; i++) {
+//         let objArr = json[keys[i]]
 
-            authorArr.push({
-                'id': json[keys[i]].author_id,
-                'name': json[keys[i]].author_name
-            })
-        }
-
-        for (var j = 0; j < objArr.length; j++) {}
-    }
-    console.log(authorArr);
-    return authorArr
-}
-
-makingAuthorArr(booksObj)
-    // function jsonConverter(obj) {
-    //     let keys = Object.keys(obj)
-    //     let result = {}
-    //     for (let i = 0; i < keys.length; i++) {
-    //         let inside = obj[keys]
-    //         for (let j = 0; j < inside.length; j++) {
-    //             if (inside[j]['id'] == 1) {
-    //                 console.log(inside[j]);
-
-//             }
-
-//         }
 //     }
+//     console.log(authorArr);
+//     return authorArr
 // }
 
-// jsonConverter(booksObj)
+// makingAuthorArr(booksObj)
+
+function jsonConverter(obj) {
+    let keys = Object.keys(obj)
+    let result = {}
+    for (let i = 0; i < keys.length; i++) {
+        let inside = obj[keys]
+        for (let j = 0; j < inside.length; j++) {
+            if (!result[inside[j].id]) {
+                result[inside[j].id] = {
+                    'id': inside[j].id,
+                    'name': inside[j].name,
+                    'author': []
+                }
+            } else {
+                result[inside[j].id].author.push({
+                    'id': inside[j].author_id,
+                    'name': inside[j].author_name
+                })
+            }
+
+        }
+    }
+    var arr = []
+    for (var key in result) {
+        arr.push(result[key])
+    }
+    console.log(JSON.stringify(arr));
+
+    return result
+}
+
+jsonConverter(booksObj)
