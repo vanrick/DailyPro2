@@ -48,7 +48,6 @@ function newJSON(json) {
             json[arraysOfAuthors[j]] = []
         }
     }
-    // console.log(json);
 }
 
 makingAuthorArr(oldJSON)
