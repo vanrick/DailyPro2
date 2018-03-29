@@ -1,5 +1,5 @@
 let x = require('./books.json')
-    // console.log(x);
+console.log(x);
 
 
 let booksObj = {
