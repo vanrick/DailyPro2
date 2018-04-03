@@ -1,17 +1,18 @@
 function fuzzySearch(searchStr) {
     let result = [];
-    let arr = searchStr.toLowerCase().split('').join()
+    let arr = searchStr.toLowerCase()
 
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i].indexOf('z') > 0) {
-            result.slice(i, 1)
-        } else {
+        console.log(arr[i]);
+        if (arr[i] !== 'z') {
             result.push(arr[i])
+        } else {
+            result.push('s')
         }
     }
-    console.log(result);
 
-    return 'Do you mean ' + result + "?"
+    return 'Do you mean ' + result.join('') + "?"
 }
 
-fuzzySearch('Jesz')
+fuzzySearch('Jesz');
+console.log(fuzzySearch('Jesz'));
