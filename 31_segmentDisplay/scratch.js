@@ -60,18 +60,17 @@ function sevenSegment(num) {
     }
     for (let i = 0; i < num.length; i++) {
         const element = num[i];
-        // console.log(element);
-        result.line1 += numbers[element].line1 + ' '
-        result.line2 += numbers[element].line2 + ' '
-        result.line3 += numbers[element].line3 + ' '
+        result.line1 += numbers[element].line1 + ' ';
+        result.line2 += numbers[element].line2 + ' ';
+        result.line3 += numbers[element].line3 + ' ';
     }
-    // console.log(result);
-    let logResult = ''
-    for (var key in result) {
-        logResult += result[key] + '\n'
+    let realResult = ''
+    for (const key in result) {
+        realResult += result[key] + '\n'
     }
-    console.log(logResult);
-    return logResult
+    console.log(realResult);
+
+    return realResult
 }
 
 
