@@ -31,6 +31,24 @@ let word_problem15 = 'What is 4 times 3 divided by 6?'
 let word_problem16 = 'What is 4 plus 3 times 2?'
 
 function wordy(problem) {
-    let result = 0;
+    problem = problem.replace('?', '').split(' ');
+    let word_stack = []
+    for (let i = 0; i < problem.length; i++) {
+        if (problem[i] == Number(problem[i])) {
+            word_stack.push(problem[i])
+        } else if (problem[i] == 'plus') {
+            word_stack.push('+')
+        } else if (problem[i] == 'times' || problem[i] == 'multiplied') {
+            word_stack.push("*")
+        } else if (problem[i] == 'minus' || problem[i] == 'subtracted') {
+            word_stack.push("-")
+        } else if (problem[i] == 'divided') {
+            word_stack.push('/')
+        }
+    }
+    console.log(eval(word_stack.join('')));
+    return eval(word_stack.join(''))
 
 }
+
+console.log(wordy(word_problem));
