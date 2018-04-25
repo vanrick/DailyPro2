@@ -51,18 +51,26 @@ function say(num) {
             console.log('3');
 
             result = singleNumObj[stringNum[0]] + '-' + hundredthNumObj[100] + ' and ' + teensNumObj[stringNum[1] + stringNum[2]]
-        } else if (stringNum.length == 3) {
+        } else if (stringNum.length == 3 && stringNum[1] == '0' && stringNum[2] !== '0') {
             console.log('4');
+
+            result = singleNumObj[stringNum[0]] + '-' + hundredthNumObj[100] + '-' + singleNumObj[stringNum[2]]
+        } else if (stringNum.length == 3) {
+            console.log('5');
 
             result = singleNumObj[stringNum[0]] + '-' + hundredthNumObj[100]
         } else if (stringNum.length == 2 && teensNumObj[stringNum]) {
-            console.log('5');
+            console.log('6');
 
             result = teensNumObj[stringNum]
         } else if (stringNum.length == 2) {
-            console.log('6');
+            console.log('7');
 
             result = tenthNumObj[stringNum[0] + 0] + '-' + singleNumObj[stringNum[0]]
+        } else if (stringNum.length == 1) {
+            console.log('8');
+
+            result = singleNumObj[stringNum[0]]
         }
 
     }
@@ -72,4 +80,11 @@ function say(num) {
 
 }
 
-say(201)
+say(100)
+    // var array = [19, 20, 13, 4]
+    // for (var i = 0; i < array.length; i++) {
+    //     setTimeout(function() {
+    //         console.log('index ' + i + ' value ' + array[i]);
+    //     }, 300)
+
+// }
