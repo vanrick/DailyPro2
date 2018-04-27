@@ -17,22 +17,25 @@ var states = [
     { id: 10, name: "South Carolina" }
 ]
 
-function fk(fk) {
-    let result;
-    let keysOnly = Object.keys(fk);
-    for (let i = 0; i < fk.length; i++) {
-        const val = Object.keys(fk[i]);
-        console.log(fk[i].id);
-        result = fk[i]
+function matchingStateWithFk(state, fk) {
+    let result = {}
+    for (let i = 0; i < state.length; i++) {
+        if (state[i].id === fk) {
+            result = state[i]
+        }
     }
-    console.log(result);
-
     return result
 }
-fk(states)
+// matchingStateWithFk(states, 3)
 
 function join(left, right, fk, pk, newKey) {
-
+    let result = [];
+    return left.map((obj) => {
+        obj[newKey] = matchingStateWithFk(right, obj[fk]);
+        delete obj[fk]
+        console.log(obj);
+        return obj
+    })
 }
 
-join(cities, states, fk, )
+join(cities, states, "state_id", states.id, "state")
