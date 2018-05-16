@@ -1,14 +1,10 @@
-const x = 'ex'
-const y = 'why'
+// const x = 'ex';
+// const x2 = 'e' + 'x';
 
 
-function compareEquals(input) {
-    if (input == 'ex') {
-        console.log('double equals');
-    } else {
-        console.log('triple equals');
-
-    }
+function compareEquals(input1, input2) {
+  console.log(input1 == input2);
+  console.log(input1 === input2);
 }
 
-compareEquals(x)
+compareEquals(0, '0');
