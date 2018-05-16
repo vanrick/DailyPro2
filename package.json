@@ -1,0 +1,23 @@
+{
+  "name": "dailypro2",
+  "version": "1.0.0",
+  "description": "Ricks First readme",
+  "main": "bubblesort.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanrick/DailyPro2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanrick/DailyPro2/issues"
+  },
+  "homepage": "https://github.com/vanrick/DailyPro2#readme",
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0"
+  }
+}
