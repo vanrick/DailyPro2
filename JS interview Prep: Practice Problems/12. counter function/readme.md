@@ -4,3 +4,5 @@ Problem:
 
 // All functionality should be inside of the function - none outside
 
+
+//closure needed
