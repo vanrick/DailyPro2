@@ -24,8 +24,16 @@
 
 
 function christmasTree(num) {
-  const result = '';
-
+  let result = '';
+  for (let i = 0; i < num - 1; i++) {
+    for (let j = i; j < num; j++) {
+      result += ' ';
+    }
+    for (let k = 1; k <= (2 * i - 1); k++) {
+      result += '*';
+    }
+    result += '\n';
+  }
   return result;
 }
 
