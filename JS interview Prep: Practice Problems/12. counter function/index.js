@@ -15,5 +15,3 @@ console.log(bFunc());
 console.log(aFunc());
 console.log(aFunc());
 console.log(aFunc());
-console.log(aFunc());
-console.log(bFunc());
