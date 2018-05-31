@@ -57,12 +57,14 @@
 
 
 function clock(h, m) {
-  if (h === 12) {
-    h = 0;
-  }
-  const hourDeg = (0.5 * m) + h * 30;
-  const minuteDeg = 6 * m;
-  return Math.abs(hourDeg + minuteDeg);
+    if (h === 12 && m === 00) {
+        return 360
+    } else if (h === 12) {
+        h = 0;
+    }
+    const hourDeg = (0.5 * m) + h * 30;
+    const minuteDeg = 6 * m;
+    return Math.abs(hourDeg - minuteDeg);
 }
 
-console.log(clock(12, 30));
+console.log(clock(12, 05));
