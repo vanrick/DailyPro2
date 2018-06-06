@@ -56,15 +56,31 @@
 // console.log(clock('6:10'));
 
 
-function clock(h, m) {
-    if (h === 12 && m === 00) {
-        return 360
-    } else if (h === 12) {
-        h = 0;
-    }
-    const hourDeg = (0.5 * m) + h * 30;
-    const minuteDeg = 6 * m;
-    return Math.abs(hourDeg - minuteDeg);
-}
+// function clock(h, m) {
+//     if (h === 12 && m === 00) {
+//         return 360
+//     } else if (h === 12) {
+//         h = 0;
+//     }
+//     const hourDeg = (0.5 * m) + h * 30;
+//     const minuteDeg = 6 * m;
+//     return Math.abs(hourDeg - minuteDeg);
+// }
 
-console.log(clock(12, 05));
+// console.log(clock(12, 05));
+
+let fullname = 'Big Ben';
+
+const awesome = {
+
+    fullname: 'Small Ben',
+
+    things: {
+        fullname: 'other Big Ben',
+        getFullName() {
+            return fullname;
+        },
+    },
+};
+
+console.log(awesome.things.getFullName());
