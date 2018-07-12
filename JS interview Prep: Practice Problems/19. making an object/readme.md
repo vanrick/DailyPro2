@@ -1,0 +1,1 @@
+list and describe 3 different ways to creating an object in javascript
