@@ -14,4 +14,3 @@ const getTripDistance2 = roadTrip1.getDistance.bind(roadTrip1);
 console.log(getTripDistance());
 console.log(getTripDistance2());
 getTripDistance();
-getTripDistance2();
